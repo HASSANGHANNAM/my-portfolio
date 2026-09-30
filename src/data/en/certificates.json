@@ -1,0 +1,26 @@
+[
+  {
+    "id": "aws-cloud-practitioner",
+    "title": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "issueDate": "2025-01-18",
+    "imageUrl": "/images/certificates/aws-cloud-practitioner.webp",
+    "skillsCovered": ["AWS Core Services", "Cloud Security", "Pricing and Billing", "Cloud Architecture"]
+  },
+  {
+    "id": "java-spring-development",
+    "title": "Java and Spring Boot Development",
+    "issuer": "Coursera Project Network",
+    "issueDate": "2024-05-22",
+    "imageUrl": "/images/certificates/java-spring-development.webp",
+    "skillsCovered": ["Java", "Spring Boot", "REST APIs", "Unit Testing"]
+  },
+  {
+    "id": "database-design",
+    "title": "Relational Database Design",
+    "issuer": "Damascus University Continuing Education Center",
+    "issueDate": "2023-11-10",
+    "imageUrl": "/images/certificates/relational-database-design.webp",
+    "skillsCovered": ["SQL", "Normalization", "Indexing", "Query Optimization"]
+  }
+]

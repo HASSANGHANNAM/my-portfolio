@@ -1,0 +1,14 @@
+{
+  "fullName": "Omar Al-Khatib",
+  "title": "Backend Software Engineer",
+  "bio": "Backend Software Engineer and Damascus University graduate focused on building reliable APIs, distributed services, and data-intensive products. I enjoy turning complex requirements into maintainable systems with clear contracts and measurable performance.",
+  "education": "BSc in Information Technology, Damascus University, 2020-2024",
+  "socialLinks": {
+    "Email": "mailto:omar.alkhatib@example.com",
+    "LinkedIn": "https://www.linkedin.com/in/omar-alkhatib",
+    "GitHub": "https://github.com/omar-alkhatib",
+    "WhatsApp": "https://wa.me/963944123456",
+    "Telegram": "https://t.me/omar_alkhatib"
+  },
+  "cvUrl": "/documents/omar-al-khatib-cv.pdf"
+}

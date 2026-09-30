@@ -1,0 +1,22 @@
+[
+  {
+    "categoryName": "Languages",
+    "skills": ["TypeScript", "Java", "C#", "Go", "SQL"]
+  },
+  {
+    "categoryName": "Backend Development",
+    "skills": ["Node.js", "NestJS", "Spring Boot", ".NET", "REST APIs", "GraphQL"]
+  },
+  {
+    "categoryName": "Data and Messaging",
+    "skills": ["PostgreSQL", "SQL Server", "Redis", "RabbitMQ", "Database Design"]
+  },
+  {
+    "categoryName": "Cloud and DevOps",
+    "skills": ["Docker", "Docker Compose", "AWS", "GitHub Actions", "Linux"]
+  },
+  {
+    "categoryName": "Engineering Practices",
+    "skills": ["Automated Testing", "System Design", "Clean Architecture", "CI/CD", "API Documentation"]
+  }
+]

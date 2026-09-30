@@ -1,0 +1,138 @@
+[
+  {
+    "id": "graduation-marketplace",
+    "title": "University Marketplace Platform",
+    "startDate": "2023-09-01",
+    "endDate": "2024-06-15",
+    "projectType": "جامعي",
+    "keyHighlights": [
+      "Designed a modular marketplace API for students and local sellers",
+      "Reduced average product search response time to under 180 ms",
+      "Implemented role-based access control and secure checkout workflows"
+    ],
+    "techStack": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Docker"],
+    "detailedSections": [
+      {
+        "heading": "Overview",
+        "content": "A graduation project that gives university communities a trusted place to list, discover, and purchase second-hand academic materials and services."
+      },
+      {
+        "heading": "Backend Contributions",
+        "content": "Built REST endpoints, validation rules, JWT authentication, database migrations, and asynchronous email notifications. Added Redis caching for frequently requested catalog data."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "/images/projects/university-marketplace-dashboard.webp",
+          "caption": "Marketplace administration dashboard"
+        }
+      ],
+      "videos": [],
+      "files": [
+        {
+          "name": "Technical documentation",
+          "url": "/documents/university-marketplace-documentation.pdf"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Source code",
+        "url": "https://github.com/omar-alkhatib/university-marketplace"
+      }
+    ]
+  },
+  {
+    "id": "logistics-api",
+    "title": "Last-Mile Logistics API",
+    "startDate": "2024-07-01",
+    "endDate": "2025-02-28",
+    "projectType": "عمل",
+    "keyHighlights": [
+      "Delivered shipment tracking endpoints used by web and mobile clients",
+      "Introduced event-driven status updates with RabbitMQ",
+      "Added structured logging and health checks for production operations"
+    ],
+    "techStack": ["Node.js", "TypeScript", "NestJS", "PostgreSQL", "RabbitMQ", "AWS"],
+    "detailedSections": [
+      {
+        "heading": "Overview",
+        "content": "A logistics service that coordinates delivery orders, courier assignments, and customer notifications across multiple cities."
+      },
+      {
+        "heading": "Backend Contributions",
+        "content": "Owned the order lifecycle service, designed versioned REST APIs, and built an idempotent event consumer for courier and delivery status changes."
+      }
+    ],
+    "media": {
+      "images": [],
+      "videos": [],
+      "files": []
+    },
+    "links": []
+  },
+  {
+    "id": "banking-internship-service",
+    "title": "Internal Banking Service Portal",
+    "startDate": "2023-07-01",
+    "endDate": "2023-08-31",
+    "projectType": "تدريب",
+    "keyHighlights": [
+      "Created reusable service-layer patterns for internal operations",
+      "Wrote integration tests for account and transaction workflows",
+      "Documented API contracts for frontend and QA teams"
+    ],
+    "techStack": ["C#", ".NET", "SQL Server", "Entity Framework Core", "xUnit"],
+    "detailedSections": [
+      {
+        "heading": "Overview",
+        "content": "An internship project for a secure internal portal used by operations staff to review customer account activity."
+      },
+      {
+        "heading": "Backend Contributions",
+        "content": "Implemented filtering and pagination endpoints, improved query projections, and added automated tests around transaction search and permissions."
+      }
+    ],
+    "media": {
+      "images": [],
+      "videos": [],
+      "files": []
+    },
+    "links": []
+  },
+  {
+    "id": "personal-observability-toolkit",
+    "title": "Developer Observability Toolkit",
+    "startDate": "2025-03-01",
+    "endDate": "2025-05-20",
+    "projectType": "شخصي",
+    "keyHighlights": [
+      "Built a lightweight service for collecting application health metrics",
+      "Added Docker Compose setup for local monitoring experiments",
+      "Published practical examples for tracing background jobs"
+    ],
+    "techStack": ["Go", "Prometheus", "Grafana", "Docker Compose"],
+    "detailedSections": [
+      {
+        "heading": "Overview",
+        "content": "A personal learning project exploring practical observability patterns for small backend services."
+      },
+      {
+        "heading": "Backend Contributions",
+        "content": "Implemented metric exporters, configurable health probes, and a small CLI for registering local services with a shared monitoring stack."
+      }
+    ],
+    "media": {
+      "images": [],
+      "videos": [],
+      "files": []
+    },
+    "links": [
+      {
+        "label": "Source code",
+        "url": "https://github.com/omar-alkhatib/observability-toolkit"
+      }
+    ]
+  }
+]
