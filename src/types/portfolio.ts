@@ -6,6 +6,10 @@ export interface Project {
   startDate: string;
   endDate: string;
   projectType: ProjectType;
+  problem?: string;
+  solution?: string;
+  architecture?: string;
+  challenges?: string[];
   keyHighlights: string[];
   techStack: string[];
   detailedSections: {
@@ -20,6 +24,7 @@ export interface Project {
     videos: {
       url: string;
       caption: string;
+      embed?: boolean;
     }[];
     files: {
       name: string;
@@ -43,6 +48,10 @@ export interface Certificate {
   issuer: string;
   issueDate: string;
   imageUrl: string;
+  images?: {
+    url: string;
+    caption: string;
+  }[];
   skillsCovered: string[];
 }
 
@@ -58,6 +67,7 @@ export interface PersonalInfo {
     github: string;
     codeforces: string;
     location: string;
+    locationUrl: string;
   };
   cvUrl: string;
 }

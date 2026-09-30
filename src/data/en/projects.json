@@ -5,6 +5,10 @@
     "startDate": "Dec 2025",
     "endDate": "Aug 2026",
     "projectType": "Academic",
+    "problem": "University services were fragmented across separate processes, making registration and student workflows difficult to coordinate at scale.",
+    "solution": "A unified digital portal that centralizes university services and automates high-volume registration workflows.",
+    "architecture": "Clean Architecture with DTOs, Repository Contracts, Service Layers, Enums, Policies, and Custom Responses.",
+    "challenges": ["Sustaining high concurrency during registration peaks.", "Processing events asynchronously while protecting API reliability."],
     "keyHighlights": [
       "Graduation Project: Architected and developed the backend for a unified digital portal automating university services.",
       "Implemented Clean Architecture using DTOs, Repository Contracts, Service Layers, Enums, Policies, and Custom Responses.",
@@ -20,9 +24,20 @@
       {
         "heading": "Performance & Async Infrastructure",
         "content": "Utilized Redis for queue management, caching, connection pooling, and rate limiting middleware to sustain high concurrency during registration peaks."
+      },
+      {
+        "heading": "Delivery & Deployment",
+        "content": "Integrated Laravel Jobs & Listeners with Redis queues for asynchronous event processing and built automated CI/CD pipelines for deployment."
       }
     ],
-    "media": { "images": [], "videos": [], "files": [] },
+    "media": {
+      "images": [
+        { "url": "/images/project-placeholder.svg", "caption": "Digital portal project overview" },
+        { "url": "/images/project-placeholder-alt.svg", "caption": "Digital portal workflow preview" }
+      ],
+      "videos": [],
+      "files": []
+    },
     "links": []
   },
   {
@@ -31,6 +46,10 @@
     "startDate": "Jun 2026",
     "endDate": "Jun 2026",
     "projectType": "Personal",
+    "problem": "Searching a large document collection across sparse, probabilistic, semantic, and hybrid retrieval approaches required a consistent evaluation system.",
+    "solution": "A modular SOA search engine that benchmarks multiple retrieval strategies and combines their results.",
+    "architecture": "Service-oriented modules for indexing, retrieval, evaluation, and visualization, backed by SQLite and FAISS vector indexing.",
+    "challenges": ["Processing 382k+ documents efficiently.", "Reducing semantic query latency while preserving retrieval quality."],
     "keyHighlights": [
       "Engineered an SOA modular search engine processing 382k+ documents (BEIR Touche-2020 dataset).",
       "Benchmarked Sparse VSM (TF-IDF), Probabilistic BM25, Deep Semantic Embeddings (BERT), and Hybrid CombSUM/Serial RRF Search.",
@@ -42,6 +61,10 @@
       {
         "heading": "Vector Indexing & Optimization",
         "content": "Integrated FAISS with L2 normalization and memory-mapped files (mmap, float32) to drastically cut semantic vector query latency from ~1.5s down to ~0.1s."
+      },
+      {
+        "heading": "Retrieval Models & Analytics",
+        "content": "Implemented and benchmarked Sparse Vector Space Model (TF-IDF), Probabilistic BM25, Deep Semantic Embeddings (BERT/all-MiniLM-L6-v2), and Hybrid CombSUM/Serial RRF search models. Built full NLTK preprocessing pipelines with stemming, Unicode normalization, and field-weighted titling alongside a dynamic Chart.js analytics interface using Flask Blueprints."
       }
     ],
     "media": { "images": [], "videos": [], "files": [] },
@@ -53,12 +76,21 @@
     "startDate": "Nov 2025",
     "endDate": "Dec 2025",
     "projectType": "Professional",
+    "problem": "Citizens and municipal teams needed a reliable way to submit, process, and audit service complaints.",
+    "solution": "A scalable backend for complaint intake, workflow processing, and traceable municipal requests.",
+    "architecture": "Laravel REST API using Redis caching, session management, queues, rate limiting, and audit tracing.",
+    "challenges": ["Maintaining reliable request processing under variable demand.", "Keeping complaint history traceable across workflow changes."],
     "keyHighlights": [
       "Developed a scalable backend system for citizen complaints and municipal requests.",
       "Leveraged Redis caching, session management, message queues, rate-limiting protocols, and audit tracing for high reliability."
     ],
     "techStack": ["Laravel", "PHP", "Redis", "MySQL", "RESTful APIs"],
-    "detailedSections": [],
+    "detailedSections": [
+      {
+        "heading": "Reliability & Availability",
+        "content": "Developed a scalable backend system for handling citizen complaints and municipal requests, applying high-performance web architecture concepts. Leveraged Redis caching, session management, message queues, rate-limiting protocols, and audit tracing for high reliability and availability."
+      }
+    ],
     "media": { "images": [], "videos": [], "files": [] },
     "links": []
   },
@@ -68,13 +100,34 @@
     "startDate": "May 2025",
     "endDate": "Sep 2025",
     "projectType": "Academic",
+    "problem": "Custom grammar specifications needed to become executable web output through a complete compiler pipeline.",
+    "solution": "A multi-stage compiler and transpiler that converts grammar input into HTML, CSS, and JavaScript.",
+    "architecture": "A staged compiler architecture covering lexical analysis, AST parsing, semantic analysis, and code generation.",
+    "challenges": ["Maintaining correct state between compilation stages.", "Generating valid coordinated output across three web languages."],
     "keyHighlights": [
       "Built a full multi-stage compiler that converts custom ANTLR-like grammar specifications directly into executable HTML, CSS, and JS.",
       "Engineered full compilation pipeline: Lexical Analysis (Lexer), Parsing (AST construction), Semantic Analysis, and Code Generation."
     ],
     "techStack": ["Java", "ANTLR", "Compiler Design", "AST", "Lexer/Parser"],
-    "detailedSections": [],
-    "media": { "images": [], "videos": [], "files": [] },
+    "detailedSections": [
+      {
+        "heading": "Compilation Pipeline",
+        "content": "Built a full multi-stage compiler that converts custom ANTLR-like grammar specifications directly into executable HTML, CSS, and JavaScript for browser environments. Designed and implemented Lexical Analysis (Lexer), Parsing (AST construction), Semantic Analysis, and Target Code Generation."
+      }
+    ],
+    "media": {
+      "images": [
+        { "url": "/images/project-placeholder-alt.svg", "caption": "Compiler pipeline preview" }
+      ],
+      "videos": [
+        {
+          "url": "https://drive.google.com/file/d/1iDYD9v-TCK-EjQEXOJHDuGSCRZzFtJ9l/preview",
+          "caption": "Compiler and transpiler demonstration",
+          "embed": true
+        }
+      ],
+      "files": []
+    },
     "links": []
   },
   {
@@ -83,12 +136,21 @@
     "startDate": "Jun 2025",
     "endDate": "Oct 2025",
     "projectType": "Professional",
+    "problem": "Medical laboratories need coordinated workflows for multiple actors while protecting sensitive patient data.",
+    "solution": "A multi-actor laboratory management platform with secure workflows for patients, technicians, and administrators.",
+    "architecture": "Laravel REST API with role-based access control separating permissions across the platform actors.",
+    "challenges": ["Protecting sensitive medical information across role boundaries.", "Supporting distinct workflows for each platform actor."],
     "keyHighlights": [
       "Engineered a multi-actor backend platform for medical analysis laboratories.",
       "Implemented Role-Based Access Control (RBAC) across Patients, Technicians, and Admins to secure sensitive medical data."
     ],
     "techStack": ["Laravel", "PHP", "MySQL", "RESTful APIs", "RBAC"],
-    "detailedSections": [],
+    "detailedSections": [
+      {
+        "heading": "Roles & Medical Workflows",
+        "content": "Engineered a multi-actor backend platform for medical analysis laboratories to manage patient records, test results, and lab workflow statuses. Implemented role-based access control for Patients, Technicians, and Admins to secure sensitive medical data."
+      }
+    ],
     "media": { "images": [], "videos": [], "files": [] },
     "links": []
   },
@@ -98,12 +160,21 @@
     "startDate": "Jun 2025",
     "endDate": "Jul 2025",
     "projectType": "Personal",
+    "problem": "A console Ludo game needed an intelligent opponent and clear real-time board state updates.",
+    "solution": "A CLI game with ANSI-rendered state updates and Expectimax-based AI decision making.",
+    "architecture": "Object-oriented game state and decision layers with Expectimax and Alpha-Beta pruning.",
+    "challenges": ["Representing changing board states clearly in a terminal.", "Balancing AI search quality with practical move selection time."],
     "keyHighlights": [
       "Engineered CLI Ludo Star with dynamic ANSI color-rendered board state updates.",
       "Implemented Expectimax (ExpVal) decision-making with Alpha-Beta pruning for optimal AI moves."
     ],
     "techStack": ["Java", "OOP", "Game AI", "Expectimax", "Alpha-Beta Pruning"],
-    "detailedSections": [],
+    "detailedSections": [
+      {
+        "heading": "Game Architecture & AI",
+        "content": "Engineered a multi-mode CLI implementation of Ludo Star for Player vs Player and Player vs AI with dynamic ANSI color-rendered board state updates. Applied Object-Oriented Programming to board mechanics, player states, turn validation, and state-space tree traversals, then implemented Expectimax decision-making with Alpha-Beta pruning to model probabilistic dice outcomes and optimal strategy."
+      }
+    ],
     "media": { "images": [], "videos": [], "files": [] },
     "links": []
   },
@@ -113,12 +184,21 @@
     "startDate": "May 2025",
     "endDate": "Jun 2025",
     "projectType": "Personal",
+    "problem": "Puzzle levels required a reliable way to model optical ray interactions and discover solutions automatically.",
+    "solution": "A CLI puzzle game with automated ray-casting and a heuristic pathfinder for level solving.",
+    "architecture": "State-space modeling combined with heuristic search and deterministic puzzle simulation.",
+    "challenges": ["Modeling reflected ray paths across changing board states.", "Finding useful solutions without exhausting the search space."],
     "keyHighlights": [
       "Built a single-player CLI puzzle game featuring automated optical ray-casting.",
       "Engineered an AI pathfinder utilizing heuristic state-space search to solve levels automatically."
     ],
     "techStack": ["Java", "OOP", "State-Space Search", "Algorithms", "Heuristics"],
-    "detailedSections": [],
+    "detailedSections": [
+      {
+        "heading": "Pathfinding & Simulation",
+        "content": "Built a single-player CLI puzzle game featuring automated optical ray-casting and board state-space rendering. Engineered an AI pathfinder and solver using state evaluation logic and heuristic graph search to calculate optimal reflection trajectories and solve levels automatically. Applied object-oriented design to dynamic grid management, mirror rotation mechanics, and light-beam path verification."
+      }
+    ],
     "media": { "images": [], "videos": [], "files": [] },
     "links": []
   },
@@ -128,12 +208,21 @@
     "startDate": "May 2024",
     "endDate": "Aug 2024",
     "projectType": "Professional",
+    "problem": "Travel customers need connected booking workflows spanning trips, hotel rooms, and activities.",
+    "solution": "A tourism backend that coordinates composite bookings and location-based destination information.",
+    "architecture": "Laravel REST API with relational booking workflows and map-integrated location services.",
+    "challenges": ["Keeping multi-item booking workflows consistent.", "Connecting location data to hotels, venues, and destinations."],
     "keyHighlights": [
       "Built a backend tourism platform with composite booking workflows for trips, hotel rooms, and activities.",
       "Integrated location-based mapping features for hotels, venues, and destinations."
     ],
     "techStack": ["Laravel", "PHP", "MySQL", "RESTful APIs", "Map Integration"],
-    "detailedSections": [],
+    "detailedSections": [
+      {
+        "heading": "Booking & Account Workflows",
+        "content": "Built a multi-featured backend tourism platform enabling users to browse curated trips, manage composite bookings for entire trips, individual hotel rooms, or activities, and track real-time booking status workflows with admin orchestration. Implemented account management, dynamic trip and venue filtering, favorites tracking, user ratings, nested comments, and location-based mapping for hotels, restaurants, and activity destinations."
+      }
+    ],
     "media": { "images": [], "videos": [], "files": [] },
     "links": []
   },
@@ -143,12 +232,21 @@
     "startDate": "Dec 2023",
     "endDate": "Jan 2024",
     "projectType": "Professional",
+    "problem": "Pharmaceutical suppliers and retail pharmacies need shared stock visibility and reliable batch tracking.",
+    "solution": "A connected pharmacy and warehouse ecosystem with medicine discovery and automated stock calculations.",
+    "architecture": "Laravel REST API with relational inventory, supplier, pharmacy, batch, and medicine workflows.",
+    "challenges": ["Keeping stock calculations accurate as batches change.", "Supporting fast medicine search and filtering across inventory."],
     "keyHighlights": [
       "Developed a pharmaceutical ecosystem connecting suppliers with retail pharmacies.",
       "Implemented dynamic batch tracking, medicine search/filtering, and automated stock calculations."
     ],
     "techStack": ["Laravel", "PHP", "MySQL", "RESTful APIs"],
-    "detailedSections": [],
+    "detailedSections": [
+      {
+        "heading": "Inventory & Authorization",
+        "content": "Designed and developed a pharmaceutical ecosystem connecting medicine suppliers and warehouses with retail pharmacies to streamline drug distribution and order management. Implemented dynamic batch tracking, medicine search and filtering, automated stock calculations, real-time order processing, and role-specific authorization for warehouse managers and pharmacists."
+      }
+    ],
     "media": { "images": [], "videos": [], "files": [] },
     "links": []
   }

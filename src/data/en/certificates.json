@@ -13,6 +13,20 @@
     "issuer": "Codeforces & Competitive Programming Community",
     "issueDate": "2025",
     "imageUrl": "/images/certificates/codeforces.png",
+    "images": [
+      {
+        "url": "/images/certificates/codeforces-rank.svg",
+        "caption": "Codeforces Pupil rank"
+      },
+      {
+        "url": "/images/certificates/dcpc-participant.svg",
+        "caption": "DCPC participation"
+      },
+      {
+        "url": "/images/certificate-placeholder.svg",
+        "caption": "Competitive programming achievement"
+      }
+    ],
     "skillsCovered": ["Data Structures", "Advanced Algorithms", "Problem Solving", "Graph Theory"]
   }
 ]

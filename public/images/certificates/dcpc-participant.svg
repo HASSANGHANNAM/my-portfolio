@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">DCPC participant certificate</title>
+  <desc id="desc">A placeholder preview for Hassan Ghannam's Damascus Collegiate Programming Contest participation.</desc>
+  <rect width="1200" height="675" fill="#022c22"/>
+  <rect x="90" y="70" width="1020" height="535" rx="24" fill="#064e3b" stroke="#34d399" stroke-width="5"/>
+  <path d="M600 140l26 54 60 9-43 42 10 60-53-28-53 28 10-60-43-42 60-9z" fill="#6ee7b7"/>
+  <text x="600" y="370" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="34" font-weight="700" text-anchor="middle">DCPC Participant</text>
+  <text x="600" y="425" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="22" text-anchor="middle">Damascus Collegiate Programming Contest</text>
+  <text x="600" y="520" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle" letter-spacing="5">HASSAN_GH</text>
+</svg>
