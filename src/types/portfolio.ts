@@ -1,4 +1,4 @@
-export type ProjectType = 'جامعي' | 'عمل' | 'تدريب' | 'شخصي';
+export type ProjectType = 'Academic' | 'Professional' | 'Training' | 'Personal';
 
 export interface Project {
   id: string;
@@ -52,11 +52,12 @@ export interface PersonalInfo {
   bio: string;
   education: string;
   socialLinks: {
-    Email: string;
-    LinkedIn: string;
-    GitHub: string;
-    WhatsApp: string;
-    Telegram: string;
+    email: string;
+    phone: string;
+    linkedin: string;
+    github: string;
+    codeforces: string;
+    location: string;
   };
   cvUrl: string;
 }

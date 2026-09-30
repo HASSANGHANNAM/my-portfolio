@@ -1,22 +1,26 @@
 [
   {
-    "categoryName": "Languages",
-    "skills": ["TypeScript", "Java", "C#", "Go", "SQL"]
+    "categoryName": "Backend & API Development",
+    "skills": ["PHP", "Laravel (MVC, DTOs, Repositories, Events & Listeners, Custom Middleware)", "Python (Flask, Blueprints)", "Payment Integration (Stripe)", "Firebase", "Postman API", "JSON", "C++", "Java", "JavaScript", "HTML/CSS"]
   },
   {
-    "categoryName": "Backend Development",
-    "skills": ["Node.js", "NestJS", "Spring Boot", ".NET", "REST APIs", "GraphQL"]
+    "categoryName": "Software Architecture & System Design",
+    "skills": ["Clean Architecture", "SOLID Principles", "Design Patterns & Anti-Patterns", "Service-Oriented Architecture (SOA)", "Component-Based Software Engineering (CBSE)", "Real-time Systems & Petri Nets", "Meta-Modeling", "SDLC", "UML"]
   },
   {
-    "categoryName": "Data and Messaging",
-    "skills": ["PostgreSQL", "SQL Server", "Redis", "RabbitMQ", "Database Design"]
+    "categoryName": "Database & Data Engineering",
+    "skills": ["MySQL", "SQLite", "SQL Server", "PL/SQL", "Relational Databases & ERD Design", "Data Warehousing", "Dimensional Modeling (Star Schema, SCD)", "MapReduce & Hadoop Concepts", "OLAP", "ACID Compliance"]
   },
   {
-    "categoryName": "Cloud and DevOps",
-    "skills": ["Docker", "Docker Compose", "AWS", "GitHub Actions", "Linux"]
+    "categoryName": "System Infrastructure, Cloud & Distributed Systems",
+    "skills": ["Asynchronous Queues & Jobs", "Caching & Session Storage (Redis)", "Microservices vs Modular Monolith", "Event-Driven Architecture (Apache Kafka, RabbitMQ)", "Saga & Outbox Patterns", "Connection Pooling", "Rate Limiting", "Load Balancing", "Fault Tolerance", "Apache", "VMware"]
   },
   {
-    "categoryName": "Engineering Practices",
-    "skills": ["Automated Testing", "System Design", "Clean Architecture", "CI/CD", "API Documentation"]
+    "categoryName": "Information Retrieval & Algorithms",
+    "skills": ["Vector Space Model (VSM / TF-IDF)", "BM25 Fine-Tuning", "Semantic Search & Embeddings (BERT)", "Vector Databases (FAISS / CPU Indexing)", "Hybrid Search (CombSUM / RRF)", "IR Metrics (MAP, NDCG, Precision@K)", "Compiler Design (Lexer, Parser, AST)", "Graph Traversal (BFS, DFS)", "Minimax & Alpha-Beta Pruning"]
+  },
+  {
+    "categoryName": "Tools, Methodologies & Problem Solving",
+    "skills": ["Git", "GitHub", "Automated CI/CD Pipelines", "Agile / Scrum", "JIRA", "Competitive Programming (Codeforces Pupil)"]
   }
 ]

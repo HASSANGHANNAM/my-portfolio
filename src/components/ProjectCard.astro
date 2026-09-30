@@ -1,0 +1,30 @@
+---
+import type { Project } from '../types/portfolio';
+
+interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+const formatDate = (date: string) =>
+	new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric' }).format(new Date(date));
+---
+
+<article class="group flex h-full flex-col rounded-2xl border border-slate-700/80 bg-slate-800 p-6 transition duration-150 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-[0_14px_40px_rgba(16,185,129,0.12)]">
+	<div class="mb-8 flex items-start justify-between gap-4">
+		<span class="font-mono text-sm text-emerald-400">0{index + 1}</span>
+		<span class="rounded-full border border-slate-600 px-3 py-1 text-xs text-slate-300">{project.projectType}</span>
+	</div>
+	<h3 class="text-xl font-semibold text-slate-100">{project.title}</h3>
+	<p class="mt-2 text-sm text-slate-400">{formatDate(project.startDate)} - {formatDate(project.endDate)}</p>
+	<ul class="mt-5 space-y-2 text-sm leading-6 text-slate-300">
+		{project.keyHighlights.map((highlight) => <li class="flex gap-2"><span class="text-emerald-400">+</span>{highlight}</li>)}
+	</ul>
+	<div class="mt-auto flex flex-wrap gap-2 pt-7">
+		{project.techStack.map((technology) => <span class="rounded-md bg-slate-700/80 px-2.5 py-1 text-xs text-slate-200">{technology}</span>)}
+	</div>
+	<button type="button" class="mt-7 inline-flex w-full items-center justify-center rounded-lg border border-emerald-400/60 px-4 py-2.5 text-sm font-semibold text-emerald-400 transition hover:bg-emerald-400 hover:text-slate-950" data-project-open={project.id}>
+		View Details
+	</button>
+</article>

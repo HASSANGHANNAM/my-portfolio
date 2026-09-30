@@ -1,14 +1,15 @@
 {
-  "fullName": "Omar Al-Khatib",
-  "title": "Backend Software Engineer",
-  "bio": "Backend Software Engineer and Damascus University graduate focused on building reliable APIs, distributed services, and data-intensive products. I enjoy turning complex requirements into maintainable systems with clear contracts and measurable performance.",
-  "education": "BSc in Information Technology, Damascus University, 2020-2024",
+  "fullName": "Hassan Ghannam",
+  "title": "Software Engineer | Backend Developer",
+  "bio": "Fresh Graduate Software & Information Systems Engineer from Damascus University with expertise in backend engineering, clean architecture, and distributed systems. Proficient in building scalable RESTful APIs using PHP/Laravel with SOLID principles, payment gateway integration, and Search & Vector Retrieval Systems.",
+  "education": "Bachelor's Degree in Information Technology Engineering (Specialization in Software Engineering & Information Systems) - Damascus University (Sep 2021 - Sep 2026)",
   "socialLinks": {
-    "Email": "mailto:omar.alkhatib@example.com",
-    "LinkedIn": "https://www.linkedin.com/in/omar-alkhatib",
-    "GitHub": "https://github.com/omar-alkhatib",
-    "WhatsApp": "https://wa.me/963944123456",
-    "Telegram": "https://t.me/omar_alkhatib"
+    "email": "hassanmohammadghannam@gmail.com",
+    "phone": "+963934519102",
+    "linkedin": "https://www.linkedin.com/in/hassan-ghanam",
+    "github": "https://github.com/HASSAN_GH",
+    "codeforces": "https://codeforces.com/profile/HASSAN_GH",
+    "location": "Damascus, Syria"
   },
-  "cvUrl": "/documents/omar-al-khatib-cv.pdf"
+  "cvUrl": "/cv.pdf"
 }

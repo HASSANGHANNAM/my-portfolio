@@ -1,0 +1,32 @@
+---
+import personalInfo from '../data/en/personal.json';
+
+const socialLinks = [
+	{ label: 'GitHub', key: 'github' as const },
+	{ label: 'LinkedIn', key: 'linkedin' as const },
+	{ label: 'Email', key: 'email' as const },
+	{ label: 'Phone', key: 'phone' as const },
+	{ label: 'Codeforces', key: 'codeforces' as const }
+];
+---
+
+<div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-start">
+	<div class="max-w-2xl">
+		<p class="font-mono text-sm text-emerald-400">04 / Profile</p>
+		<h2 class="mt-2 text-3xl font-semibold text-white">About me</h2>
+		<p class="mt-8 text-lg leading-8 text-slate-400">{personalInfo.bio}</p>
+		<div class="mt-8 border-l-2 border-emerald-400 pl-5">
+			<p class="text-xs uppercase tracking-wide text-slate-500">Education</p>
+			<p class="mt-2 text-base leading-7 text-slate-200">{personalInfo.education}</p>
+		</div>
+	</div>
+
+	<aside class="w-full rounded-2xl border border-slate-800 bg-slate-900/60 p-5 sm:p-6 lg:max-w-xs">
+		<p class="text-sm font-semibold text-slate-100">Find me online</p>
+		<div class="mt-4 flex flex-wrap gap-2 lg:flex-col">
+			{socialLinks.map((social) => <a href={social.key === 'phone' ? `tel:${personalInfo.socialLinks[social.key]}` : personalInfo.socialLinks[social.key]} target={social.key === 'email' || social.key === 'phone' ? undefined : '_blank'} rel="noreferrer" class="inline-flex items-center justify-between rounded-lg border border-slate-700 px-3 py-2.5 text-sm text-slate-300 transition hover:border-emerald-400 hover:bg-emerald-400/10 hover:text-emerald-300 lg:w-full"><span>{social.label}</span><span aria-hidden="true" class="text-emerald-400">↗</span></a>)}
+			<div class="inline-flex items-center justify-between rounded-lg border border-slate-700 px-3 py-2.5 text-sm text-slate-400 lg:w-full"><span>Location</span><span>{personalInfo.socialLinks.location}</span></div>
+			<a href="/cv.pdf" download="Hassan_Ghanam_CV.pdf" target="_blank" rel="noopener noreferrer" class="mt-1 inline-flex items-center justify-center rounded-lg bg-emerald-400 px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300 lg:w-full">Download CV <span aria-hidden="true" class="ml-2">↓</span></a>
+		</div>
+	</aside>
+</div>
