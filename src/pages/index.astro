@@ -1,92 +1,50 @@
 ---
-import '../styles/global.css';
-import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
 import ProjectsSection from '../components/ProjectsSection.astro';
-import SkillsSection from '../components/SkillsSection.astro';
-import CertificatesSection from '../components/CertificatesSection.astro';
-import AboutSection from '../components/AboutSection.astro';
 import personalInfo from '../data/en/personal.json';
 import projects from '../data/en/projects.json';
 import skills from '../data/en/skills.json';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={`${personalInfo.fullName} - ${personalInfo.title}`} />
-		<title>{personalInfo.fullName} | {personalInfo.title}</title>
-	</head>
-	<body class="min-h-screen bg-slate-950 text-slate-100">
-		<Navbar cvUrl={personalInfo.cvUrl} fullName={personalInfo.fullName} title={personalInfo.title} />
+<Layout title={`${personalInfo.fullName} | ${personalInfo.title}`}>
+	<section class="mx-auto max-w-6xl px-5 pb-16 pt-16 lg:px-8 lg:pt-24">
+		<div class="grid gap-10 border-b border-slate-200 pb-16 dark:border-slate-800 lg:grid-cols-[1fr_auto] lg:items-end">
+			<div class="max-w-3xl">
+				<p class="mb-4 font-mono text-sm uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">Backend / Systems / APIs</p>
+				<h1 class="max-w-2xl text-4xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-6xl">Building dependable software for complex systems.</h1>
+				<p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">{personalInfo.bio}</p>
+			</div>
+			<div class="grid grid-cols-2 gap-3 text-sm text-slate-600 dark:text-slate-400 lg:min-w-56">
+				<div class="border-l-2 border-emerald-500 px-4 py-2"><strong class="block text-2xl text-slate-950 dark:text-slate-100">{projects.length}</strong>Selected projects</div>
+				<div class="border-l-2 border-slate-300 px-4 py-2 dark:border-slate-700"><strong class="block text-2xl text-slate-950 dark:text-slate-100">{skills.reduce((total, group) => total + group.skills.length, 0)}</strong>Core skills</div>
+			</div>
+		</div>
+	</section>
 
-		<main class="mx-auto max-w-6xl px-5 pb-20 pt-12 lg:px-8">
-			<section class="mb-12 grid gap-8 border-b border-slate-800 pb-12 lg:grid-cols-[1fr_auto] lg:items-end">
-				<div class="max-w-3xl">
-					<p class="mb-4 font-mono text-sm uppercase tracking-[0.2em] text-emerald-400">Backend / Systems / APIs</p>
-					<h1 class="max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">Building dependable software for complex systems.</h1>
-					<p class="mt-6 max-w-2xl text-lg leading-8 text-slate-400">{personalInfo.bio}</p>
-				</div>
-				<div class="grid grid-cols-2 gap-3 text-sm text-slate-400 lg:min-w-56">
-					<div class="border-l-2 border-emerald-400 px-4 py-2"><strong class="block text-2xl text-slate-100">{projects.length}</strong>Selected projects</div>
-					<div class="border-l-2 border-slate-700 px-4 py-2"><strong class="block text-2xl text-slate-100">{skills.reduce((total, group) => total + group.skills.length, 0)}</strong>Core skills</div>
-				</div>
-			</section>
+	<section class="mx-auto max-w-6xl px-5 pb-20 lg:px-8" aria-labelledby="featured-projects-heading">
+		<div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+			<div><p class="font-mono text-sm text-emerald-600 dark:text-emerald-400">01 / Work</p><h2 id="featured-projects-heading" class="mt-2 text-3xl font-semibold text-slate-950 dark:text-white">Selected projects</h2></div>
+			<a href="/projects" class="text-sm text-slate-500 transition hover:text-emerald-600 dark:hover:text-emerald-400">View all projects →</a>
+		</div>
+		<ProjectsSection />
+	</section>
 
-			<section id="projects-content" class="tab-content transition-opacity duration-150" data-content="projects" aria-labelledby="projects-tab">
-				<div class="mb-8 flex items-end justify-between gap-4">
-					<div><p class="font-mono text-sm text-emerald-400">01 / Work</p><h2 class="mt-2 text-3xl font-semibold text-white">Selected projects</h2></div>
-					<p class="hidden text-sm text-slate-500 sm:block">A few systems I have designed and shipped.</p>
-				</div>
-				<ProjectsSection />
-			</section>
+	<section class="border-y border-slate-200 bg-slate-100/70 dark:border-slate-800 dark:bg-slate-900/40" aria-labelledby="key-skills-heading">
+		<div class="mx-auto max-w-6xl px-5 py-16 lg:px-8">
+			<div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+				<div><p class="font-mono text-sm text-emerald-600 dark:text-emerald-400">02 / Toolkit</p><h2 id="key-skills-heading" class="mt-2 text-3xl font-semibold text-slate-950 dark:text-white">Key skills</h2></div>
+				<a href="/skills" class="text-sm text-slate-500 transition hover:text-emerald-600 dark:hover:text-emerald-400">Explore all skills →</a>
+			</div>
+			<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+				{skills.map((category) => <article class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950/50"><h3 class="font-semibold text-slate-950 dark:text-slate-100">{category.categoryName}</h3><div class="mt-4 flex flex-wrap gap-2">{category.skills.slice(0, 4).map((skill) => <span class="rounded-md border border-slate-200 px-2.5 py-1 text-xs text-slate-600 dark:border-slate-700 dark:text-slate-300">{skill}</span>)}</div></article>)}
+			</div>
+		</div>
+	</section>
 
-			<section id="skills-content" class="tab-content hidden opacity-0 transition-opacity duration-150" data-content="skills" aria-labelledby="skills-tab">
-				<div class="mb-8"><p class="font-mono text-sm text-emerald-400">02 / Toolkit</p><h2 class="mt-2 text-3xl font-semibold text-white">Skills and technologies</h2></div>
-				<SkillsSection />
-			</section>
-
-			<section id="certifications-content" class="tab-content hidden opacity-0 transition-opacity duration-150" data-content="certifications" aria-labelledby="certifications-tab">
-				<div class="mb-8"><p class="font-mono text-sm text-emerald-400">03 / Credentials</p><h2 class="mt-2 text-3xl font-semibold text-white">Certifications</h2></div>
-				<CertificatesSection />
-			</section>
-
-			<section id="about-content" class="tab-content hidden opacity-0 transition-opacity duration-150" data-content="about" aria-labelledby="about-tab">
-				<AboutSection />
-			</section>
-		</main>
-
-		<script>
-			const triggers = document.querySelectorAll<HTMLButtonElement>('.tab-trigger');
-			const contents = document.querySelectorAll<HTMLElement>('.tab-content');
-
-			function switchTab(tabId: string) {
-				triggers.forEach((trigger) => {
-					const isActive = trigger.dataset.tab === tabId;
-					trigger.classList.toggle('border-emerald-400', isActive);
-					trigger.classList.toggle('bg-emerald-400/10', isActive);
-					trigger.classList.toggle('text-emerald-400', isActive);
-					trigger.classList.toggle('text-slate-400', !isActive);
-					trigger.setAttribute('aria-selected', String(isActive));
-				});
-
-				contents.forEach((content) => {
-					const isActive = content.dataset.content === tabId;
-					content.classList.toggle('hidden', !isActive);
-					content.classList.toggle('opacity-0', !isActive);
-					content.classList.toggle('opacity-100', isActive);
-				});
-			}
-
-			triggers.forEach((trigger) => trigger.addEventListener('click', () => switchTab(trigger.dataset.tab ?? 'projects')));
-			document.querySelectorAll<HTMLElement>('[data-tab-link]').forEach((link) => link.addEventListener('click', (event) => {
-				event.preventDefault();
-				switchTab(link.dataset.tabLink ?? 'projects');
-			}));
-			switchTab('projects');
-		</script>
-	</body>
-</html>
+	<section class="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20" aria-labelledby="home-cta-heading">
+		<div class="flex flex-col gap-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-7 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+			<div><p class="font-mono text-sm text-emerald-600 dark:text-emerald-400">03 / Next step</p><h2 id="home-cta-heading" class="mt-2 text-2xl font-semibold text-slate-950 dark:text-white">Let’s build something dependable.</h2></div>
+			<div class="flex flex-wrap gap-3"><a href="/contact" class="rounded-lg bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">Contact me</a><a href="/cv.pdf" download="Hassan_Ghanam_CV.pdf" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-emerald-500 px-5 py-3 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-500 hover:text-slate-950 dark:text-emerald-300">Download CV</a></div>
+		</div>
+	</section>
+</Layout>

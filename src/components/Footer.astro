@@ -1,0 +1,12 @@
+---
+import personalInfo from '../data/en/personal.json';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-800 bg-slate-950 py-8">
+	<div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+		<p>© {currentYear} Hassan Ghanam. All rights reserved.</p>
+		<div class="flex flex-wrap gap-4"><a href={personalInfo.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" class="transition hover:text-emerald-400">LinkedIn</a><a href={personalInfo.socialLinks.github} target="_blank" rel="noopener noreferrer" class="transition hover:text-emerald-400">GitHub</a><a href={`mailto:${personalInfo.socialLinks.email}`} class="transition hover:text-emerald-400">Email</a></div>
+	</div>
+</footer>

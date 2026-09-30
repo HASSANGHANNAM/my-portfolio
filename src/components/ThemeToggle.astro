@@ -1,0 +1,27 @@
+<button
+	type="button"
+	class="theme-toggle inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-slate-700 transition hover:border-emerald-400 hover:text-emerald-600 dark:border-slate-700 dark:text-slate-300 dark:hover:text-emerald-400"
+	aria-label="Switch to light theme"
+	data-theme-toggle
+>
+	<span class="text-lg" data-theme-icon aria-hidden="true">☼</span>
+</button>
+
+<script>
+	const toggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+	const icon = document.querySelector<HTMLElement>('[data-theme-icon]');
+
+	function updateThemeButton() {
+		const isDark = document.documentElement.classList.contains('dark');
+		toggle?.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+		if (icon) icon.textContent = isDark ? '☼' : '☾';
+	}
+
+	toggle?.addEventListener('click', () => {
+		const isDark = document.documentElement.classList.toggle('dark');
+		localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		updateThemeButton();
+	});
+
+	updateThemeButton();
+</script>

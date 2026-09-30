@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import personalInfo from '../data/en/personal.json';
+---
+
+<Layout title={`Contact | ${personalInfo.fullName}`}>
+	<section class="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-24">
+		<div class="max-w-2xl"><p class="font-mono text-sm text-emerald-600 dark:text-emerald-400">05 / Contact</p><h1 class="mt-2 text-4xl font-semibold text-slate-950 dark:text-white sm:text-5xl">Let’s connect</h1><p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-400">Have a project, opportunity, or technical question? Send a message and I’ll get back to you.</p></div>
+		<div class="mt-12 grid gap-10 lg:grid-cols-[1fr_0.7fr]">
+			<form class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/60 sm:p-8" action={`mailto:${personalInfo.socialLinks.email}`} method="post" enctype="text/plain">
+				<div class="grid gap-5 sm:grid-cols-2"><label class="text-sm font-medium text-slate-700 dark:text-slate-300">Name<input name="name" required class="mt-2 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2.5 outline-none transition focus:border-emerald-500 dark:border-slate-700" /></label><label class="text-sm font-medium text-slate-700 dark:text-slate-300">Email<input type="email" name="email" required class="mt-2 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2.5 outline-none transition focus:border-emerald-500 dark:border-slate-700" /></label></div>
+				<label class="mt-5 block text-sm font-medium text-slate-700 dark:text-slate-300">Message<textarea name="message" rows="6" required class="mt-2 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2.5 outline-none transition focus:border-emerald-500 dark:border-slate-700"></textarea></label>
+				<button type="submit" class="mt-6 rounded-lg bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">Send message</button>
+			</form>
+			<div class="space-y-3"><p class="mb-5 text-sm font-semibold text-slate-950 dark:text-slate-100">Direct contact</p><a href={`mailto:${personalInfo.socialLinks.email}`} class="block rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-600 transition hover:border-emerald-500 hover:text-emerald-600 dark:border-slate-800 dark:text-slate-400 dark:hover:text-emerald-400">{personalInfo.socialLinks.email}</a><a href={`tel:${personalInfo.socialLinks.phone}`} class="block rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-600 transition hover:border-emerald-500 hover:text-emerald-600 dark:border-slate-800 dark:text-slate-400 dark:hover:text-emerald-400">{personalInfo.socialLinks.phone}</a><div class="block rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400">{personalInfo.socialLinks.location}</div></div>
+		</div>
+	</section>
+</Layout>
