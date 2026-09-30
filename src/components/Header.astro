@@ -11,19 +11,19 @@ const links = [
 	{ href: '/contact', label: 'Contact' }
 ];
 const currentPath = Astro.url.pathname;
+
+const isActive = (href: string) => currentPath === href || (href !== '/' && currentPath.startsWith(`${href}/`));
 ---
 
 <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/90">
-	<div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 lg:px-8">
-		<div class="flex items-center justify-between gap-4">
-			<a href="/" class="group flex min-w-0 items-center gap-3">
-				<span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-emerald-400/40 bg-emerald-400/10 font-mono text-sm font-bold text-emerald-400 transition group-hover:border-emerald-300 group-hover:bg-emerald-400/20">HG</span>
-				<span class="min-w-0"><span class="block truncate text-sm font-semibold tracking-wide text-slate-900 dark:text-slate-100">{personalInfo.fullName}</span><span class="block truncate text-xs text-slate-500">{personalInfo.title}</span></span>
-			</a>
-			<div class="flex items-center gap-2"><a href="/cv.pdf" download="Hassan_Ghanam_CV.pdf" target="_blank" rel="noopener noreferrer" class="hidden rounded-lg border border-emerald-400/70 px-4 py-2 text-sm font-semibold text-emerald-400 transition hover:bg-emerald-400 hover:text-slate-950 sm:inline-flex">Download CV</a><ThemeToggle /></div>
-		</div>
-		<nav aria-label="Main navigation" class="flex w-full flex-wrap justify-center gap-1 rounded-xl border border-slate-200 bg-slate-100/80 p-1 lg:justify-start dark:border-slate-800 dark:bg-slate-900/70">
-			{links.map((link) => <a href={link.href} class:list={['rounded-lg border px-2.5 py-2 text-sm transition sm:px-3', currentPath === link.href ? 'border-emerald-400 bg-emerald-400/10 text-emerald-600 dark:text-emerald-400' : 'border-transparent text-slate-600 hover:border-slate-300 hover:text-slate-950 dark:text-slate-400 dark:hover:border-slate-700 dark:hover:text-slate-100']} aria-current={currentPath === link.href ? 'page' : undefined}>{link.label}</a>)}
+	<div class="mx-auto flex max-w-6xl flex-wrap items-center gap-4 px-5 py-5 lg:flex-nowrap lg:px-8">
+		<a href="/" class="group flex min-w-0 items-center gap-3 lg:flex-1">
+			<span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-emerald-400/40 bg-emerald-400/10 font-mono text-sm font-bold text-emerald-400 transition group-hover:border-emerald-300 group-hover:bg-emerald-400/20">HG</span>
+			<span class="min-w-0"><span class="block truncate text-sm font-semibold tracking-wide text-slate-900 dark:text-slate-100">{personalInfo.fullName}</span><span class="block truncate text-xs text-slate-500">{personalInfo.title}</span></span>
+		</a>
+		<nav aria-label="Main navigation" class="order-3 flex w-full flex-wrap justify-center gap-1 rounded-xl border border-slate-200 bg-slate-100/80 p-1 lg:order-none lg:w-auto dark:border-slate-800 dark:bg-slate-900/70">
+			{links.map((link) => <a href={link.href} class:list={['rounded-lg border px-2.5 py-2 text-sm transition sm:px-3', isActive(link.href) ? 'nav-link-active border-emerald-500 bg-emerald-400/15 font-semibold text-emerald-700 dark:border-emerald-400 dark:text-emerald-300' : 'border-transparent text-slate-600 hover:border-slate-300 hover:text-slate-950 dark:text-slate-400 dark:hover:border-slate-700 dark:hover:text-slate-100']} aria-current={isActive(link.href) ? 'page' : undefined}>{link.label}</a>)}
 		</nav>
+		<div class="flex items-center justify-end gap-2 lg:flex-1"><a href="/cv.pdf" download="Hassan_Ghanam_CV.pdf" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-emerald-400/70 px-3 py-2 text-sm font-semibold text-emerald-600 transition hover:bg-emerald-400 hover:text-slate-950 dark:text-emerald-400 sm:px-4">Download CV</a><ThemeToggle /></div>
 	</div>
 </header>

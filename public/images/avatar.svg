@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Hassan Ghannam avatar</title>
+  <desc id="desc">A professional avatar placeholder for Hassan Ghannam.</desc>
+  <rect width="400" height="400" rx="72" fill="#0f172a"/>
+  <circle cx="200" cy="154" r="72" fill="#10b981" opacity=".9"/>
+  <path d="M82 350c13-76 59-114 118-114s105 38 118 114" fill="#10b981" opacity=".9"/>
+  <circle cx="174" cy="151" r="8" fill="#0f172a"/>
+  <circle cx="226" cy="151" r="8" fill="#0f172a"/>
+  <path d="M171 187c18 14 40 14 58 0" fill="none" stroke="#0f172a" stroke-linecap="round" stroke-width="8"/>
+  <text x="200" y="382" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle" letter-spacing="3">HG</text>
+</svg>

@@ -12,3 +12,7 @@ body {
 	background-color: #0f172a;
 	color: #f8fafc;
 }
+
+.nav-link-active {
+	box-shadow: 0 0 0 2px rgb(16 185 129 / 0.2), 0 4px 14px rgb(16 185 129 / 0.12);
+}
