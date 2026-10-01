@@ -38,6 +38,7 @@ export interface Project {
 }
 
 export interface SkillCategory {
+  layer: 'Practical Skills' | 'Theoretical Knowledge';
   categoryName: string;
   skills: string[];
 }

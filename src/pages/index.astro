@@ -36,7 +36,7 @@ import skills from '../data/en/skills.json';
 				<a href="/skills" class="text-sm text-slate-500 transition hover:text-emerald-600 dark:hover:text-emerald-400">Explore all skills →</a>
 			</div>
 			<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-				{skills.slice(0, 2).map((category) => <article class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950/50"><h3 class="font-semibold text-slate-950 dark:text-slate-100">{category.categoryName}</h3><div class="mt-4 flex flex-wrap gap-2">{category.skills.slice(0, 4).map((skill) => <span class="rounded-md border border-slate-200 px-2.5 py-1 text-xs text-slate-600 dark:border-slate-700 dark:text-slate-300">{skill}</span>)}</div></article>)}
+				{skills.filter((category) => category.layer === 'Practical Skills' || category.layer === 'Theoretical Knowledge').slice(0, 2).map((category) => <article class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950/50"><p class="font-mono text-xs text-emerald-600 dark:text-emerald-400">{category.layer}</p><h3 class="mt-2 font-semibold text-slate-950 dark:text-slate-100">{category.categoryName}</h3><div class="mt-4 flex flex-wrap gap-2">{category.skills.slice(0, 4).map((skill) => <span class="rounded-md border border-slate-200 px-2.5 py-1 text-xs text-slate-600 dark:border-slate-700 dark:text-slate-300">{skill}</span>)}</div></article>)}
 			</div>
 		</div>
 	</section>

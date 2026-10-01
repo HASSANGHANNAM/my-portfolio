@@ -13,12 +13,29 @@ function closeLightbox(lightbox: HTMLElement) {
 }
 
 function showGallery(lightbox: HTMLElement, index: number) {
-	const gallery = JSON.parse(lightbox.dataset.gallery ?? '[]') as { url: string; caption: string }[];
+	const gallery = JSON.parse(lightbox.dataset.gallery ?? '[]') as { url: string; caption: string; type?: string; embed?: boolean }[];
 	const image = lightbox.querySelector<HTMLImageElement>('[data-media-lightbox-image]');
-	if (!image || gallery.length === 0) return;
+	const embed = lightbox.querySelector<HTMLIFrameElement>('[data-media-lightbox-embed]');
+	const video = lightbox.querySelector<HTMLVideoElement>('[data-media-lightbox-video]');
+	if (gallery.length === 0) return;
 	const activeIndex = (index + gallery.length) % gallery.length;
-	image.src = gallery[activeIndex].url;
-	image.alt = gallery[activeIndex].caption;
+	const item = gallery[activeIndex];
+	const kind = item.type === 'video' ? (item.embed ? 'embed' : 'video') : 'image';
+	image?.classList.toggle('hidden', kind !== 'image');
+	if (image && kind === 'image') {
+		image.src = item.url;
+		image.alt = item.caption;
+	}
+	embed?.classList.toggle('hidden', kind !== 'embed');
+	if (embed && kind === 'embed') {
+		embed.src = item.url;
+		embed.title = item.caption;
+	}
+	video?.classList.toggle('hidden', kind !== 'video');
+	if (video && kind === 'video') {
+		video.src = item.url;
+		video.setAttribute('aria-label', item.caption);
+	}
 	lightbox.dataset.galleryIndex = String(activeIndex);
 	const hasMultiple = gallery.length > 1;
 	lightbox.querySelector<HTMLButtonElement>('[data-gallery-prev]')?.classList.toggle('hidden', !hasMultiple);
@@ -47,11 +64,13 @@ function openLightbox(trigger: HTMLElement) {
 	if (embed && kind === 'embed') {
 		embed.src = source;
 		embed.title = caption;
+		if (trigger.dataset.mediaGallery) showGallery(lightbox, 0);
 	}
 	video?.classList.toggle('hidden', kind !== 'video');
 	if (video && kind === 'video') {
 		video.src = source;
 		video.setAttribute('aria-label', caption);
+		if (trigger.dataset.mediaGallery) showGallery(lightbox, 0);
 	}
 
 	lightbox.classList.remove('hidden');
