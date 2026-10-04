@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Damascus University degree</title>
+  <desc id="desc">Certificate-style preview for Hassan Ghannam's Information Technology Engineering degree.</desc>
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  <rect x="45" y="45" width="1110" height="710" fill="none" stroke="#10b981" stroke-width="8"/>
+  <rect x="70" y="70" width="1060" height="660" fill="none" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="600" cy="190" r="70" fill="#0f172a"/>
+  <path d="M565 190h70M600 155v70" stroke="#10b981" stroke-width="12"/>
+  <text x="600" y="325" fill="#0f172a" font-family="Georgia, serif" font-size="38" text-anchor="middle">Damascus University</text>
+  <text x="600" y="390" fill="#334155" font-family="system-ui, sans-serif" font-size="27" text-anchor="middle">Bachelor's Degree in Information Technology Engineering</text>
+  <text x="600" y="445" fill="#64748b" font-family="system-ui, sans-serif" font-size="22" text-anchor="middle">Software Engineering &amp; Information Systems</text>
+  <line x1="330" y1="555" x2="870" y2="555" stroke="#94a3b8" stroke-width="2"/>
+  <text x="600" y="620" fill="#10b981" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" letter-spacing="4">HASSAN GHANNAM</text>
+</svg>

@@ -32,11 +32,20 @@
     ],
     "media": {
       "images": [
-        { "url": "/images/project-placeholder.svg", "caption": "Digital portal project overview" },
-        { "url": "/images/project-placeholder-alt.svg", "caption": "Digital portal workflow preview" }
+        { "url": "/Attachments/projects/UDPFSU/1.jpg", "caption": "Digital portal image 1" },
+        { "url": "/Attachments/projects/UDPFSU/2.jpg", "caption": "Digital portal image 2" },
+        { "url": "/Attachments/projects/UDPFSU/4.jpg", "caption": "Digital portal image 4" },
+        { "url": "/Attachments/projects/UDPFSU/5.jpg", "caption": "Digital portal image 5" },
+        { "url": "/Attachments/projects/UDPFSU/6.jpg", "caption": "Digital portal image 6" },
+        { "url": "/Attachments/projects/UDPFSU/7.png", "caption": "Digital portal image 7" },
+        { "url": "/Attachments/projects/UDPFSU/8.png", "caption": "Digital portal image 8" },
+        { "url": "/Attachments/projects/UDPFSU/9.png", "caption": "Digital portal image 9" },
+        { "url": "/Attachments/projects/UDPFSU/10.png", "caption": "Digital portal image 10" },
+        { "url": "/Attachments/projects/UDPFSU/11.png", "caption": "Digital portal image 11" },
+        { "url": "/Attachments/projects/UDPFSU/12.png", "caption": "Digital portal image 12" }
       ],
       "videos": [],
-      "files": []
+      "files": [{ "name": "Digital portal project document", "url": "/Attachments/projects/UDPFSU/3.pdf" }]
     },
     "links": []
   },
@@ -67,7 +76,14 @@
         "content": "Implemented and benchmarked Sparse Vector Space Model (TF-IDF), Probabilistic BM25, Deep Semantic Embeddings (BERT/all-MiniLM-L6-v2), and Hybrid CombSUM/Serial RRF search models. Built full NLTK preprocessing pipelines with stemming, Unicode normalization, and field-weighted titling alongside a dynamic Chart.js analytics interface using Flask Blueprints."
       }
     ],
-    "media": { "images": [], "videos": [], "files": [] },
+    "media": {
+      "images": [
+        { "url": "/Attachments/projects/IR/1.png", "caption": "Information retrieval image 1" },
+        { "url": "/Attachments/projects/IR/2.png", "caption": "Information retrieval image 2" }
+      ],
+      "videos": [],
+      "files": [{ "name": "Information retrieval report", "url": "/Attachments/projects/IR/3.pdf" }]
+    },
     "links": []
   },
   {
@@ -91,7 +107,7 @@
         "content": "Developed a scalable backend system for handling citizen complaints and municipal requests, applying high-performance web architecture concepts. Leveraged Redis caching, session management, message queues, rate-limiting protocols, and audit tracing for high reliability and availability."
       }
     ],
-    "media": { "images": [], "videos": [], "files": [] },
+    "media": { "images": [{ "url": "/Attachments/projects/CMS/1.jpg", "caption": "Complaints Management System" }], "videos": [], "files": [] },
     "links": []
   },
   {
@@ -116,9 +132,7 @@
       }
     ],
     "media": {
-      "images": [
-        { "url": "/images/project-placeholder-alt.svg", "caption": "Compiler pipeline preview" }
-      ],
+      "images": [{ "url": "/Attachments/projects/Compiler/1.png", "caption": "Compiler pipeline preview" }],
       "videos": [
         {
           "url": "https://drive.google.com/file/d/1iDYD9v-TCK-EjQEXOJHDuGSCRZzFtJ9l/preview",
@@ -151,7 +165,36 @@
         "content": "Engineered a multi-actor backend platform for medical analysis laboratories to manage patient records, test results, and lab workflow statuses. Implemented role-based access control for Patients, Technicians, and Admins to secure sensitive medical data."
       }
     ],
-    "media": { "images": [], "videos": [], "files": [] },
+    "media": {
+      "images": [
+        { "url": "/Attachments/projects/MatchLab/1.jpg", "caption": "MatchLab image 1" },
+        { "url": "/Attachments/projects/MatchLab/2.jpg", "caption": "MatchLab image 2" },
+        { "url": "/Attachments/projects/MatchLab/3.jpg", "caption": "MatchLab image 3" },
+        { "url": "/Attachments/projects/MatchLab/4.jpg", "caption": "MatchLab image 4" },
+        { "url": "/Attachments/projects/MatchLab/5.jpg", "caption": "MatchLab image 5" },
+        { "url": "/Attachments/projects/MatchLab/6.jpg", "caption": "MatchLab image 6" },
+        { "url": "/Attachments/projects/MatchLab/7.jpg", "caption": "MatchLab image 7" },
+        { "url": "/Attachments/projects/MatchLab/8.jpg", "caption": "MatchLab image 8" },
+        { "url": "/Attachments/projects/MatchLab/9.jpg", "caption": "MatchLab image 9" },
+        { "url": "/Attachments/projects/MatchLab/10.jpg", "caption": "MatchLab image 10" },
+        { "url": "/Attachments/projects/MatchLab/11.jpg", "caption": "MatchLab image 11" },
+        { "url": "/Attachments/projects/MatchLab/12.jpg", "caption": "MatchLab image 12" },
+        { "url": "/Attachments/projects/MatchLab/13.jpg", "caption": "MatchLab image 13" },
+        { "url": "/Attachments/projects/MatchLab/14.jpg", "caption": "MatchLab image 14" },
+        { "url": "/Attachments/projects/MatchLab/15.jpg", "caption": "MatchLab image 15" },
+        { "url": "/Attachments/projects/MatchLab/16.jpg", "caption": "MatchLab image 16" },
+        { "url": "/Attachments/projects/MatchLab/17.jpg", "caption": "MatchLab image 17" },
+        { "url": "/Attachments/projects/MatchLab/18.jpg", "caption": "MatchLab image 18" },
+        { "url": "/Attachments/projects/MatchLab/19.jpg", "caption": "MatchLab image 19" },
+        { "url": "/Attachments/projects/MatchLab/20.jpg", "caption": "MatchLab image 20" },
+        { "url": "/Attachments/projects/MatchLab/21.jpg", "caption": "MatchLab image 21" },
+        { "url": "/Attachments/projects/MatchLab/22.jpg", "caption": "MatchLab image 22" },
+        { "url": "/Attachments/projects/MatchLab/23.jpg", "caption": "MatchLab image 23" },
+        { "url": "/Attachments/projects/MatchLab/24.jpg", "caption": "MatchLab image 24" }
+      ],
+      "videos": [],
+      "files": []
+    },
     "links": []
   },
   {
@@ -175,7 +218,14 @@
         "content": "Engineered a multi-mode CLI implementation of Ludo Star for Player vs Player and Player vs AI with dynamic ANSI color-rendered board state updates. Applied Object-Oriented Programming to board mechanics, player states, turn validation, and state-space tree traversals, then implemented Expectimax decision-making with Alpha-Beta pruning to model probabilistic dice outcomes and optimal strategy."
       }
     ],
-    "media": { "images": [], "videos": [], "files": [] },
+    "media": {
+      "images": [
+        { "url": "/Attachments/projects/Ludo%20Star/1.jpg", "caption": "Ludo Star image 1" },
+        { "url": "/Attachments/projects/Ludo%20Star/2.jpg", "caption": "Ludo Star image 2" }
+      ],
+      "videos": [],
+      "files": []
+    },
     "links": []
   },
   {
@@ -199,7 +249,14 @@
         "content": "Built a single-player CLI puzzle game featuring automated optical ray-casting and board state-space rendering. Engineered an AI pathfinder and solver using state evaluation logic and heuristic graph search to calculate optimal reflection trajectories and solve levels automatically. Applied object-oriented design to dynamic grid management, mirror rotation mechanics, and light-beam path verification."
       }
     ],
-    "media": { "images": [], "videos": [], "files": [] },
+    "media": {
+      "images": [
+        { "url": "/Attachments/projects/Light%20Link%20Mirror/1.jpg", "caption": "Light Link Mirror image 1" },
+        { "url": "/Attachments/projects/Light%20Link%20Mirror/2.jpg", "caption": "Light Link Mirror image 2" }
+      ],
+      "videos": [],
+      "files": []
+    },
     "links": []
   },
   {
@@ -223,7 +280,19 @@
         "content": "Built a multi-featured backend tourism platform enabling users to browse curated trips, manage composite bookings for entire trips, individual hotel rooms, or activities, and track real-time booking status workflows with admin orchestration. Implemented account management, dynamic trip and venue filtering, favorites tracking, user ratings, nested comments, and location-based mapping for hotels, restaurants, and activity destinations."
       }
     ],
-    "media": { "images": [], "videos": [], "files": [] },
+    "media": {
+      "images": [
+        { "url": "/Attachments/projects/TRAVANIX/1.png", "caption": "TRAVANIX image 1" },
+        { "url": "/Attachments/projects/TRAVANIX/5.jpg", "caption": "TRAVANIX image 5" },
+        { "url": "/Attachments/projects/TRAVANIX/6.jpg", "caption": "TRAVANIX image 6" }
+      ],
+      "videos": [
+        { "url": "/Attachments/projects/TRAVANIX/2.mp4", "caption": "TRAVANIX video 2" },
+        { "url": "/Attachments/projects/TRAVANIX/3.mp4", "caption": "TRAVANIX video 3" },
+        { "url": "/Attachments/projects/TRAVANIX/4.mp4", "caption": "TRAVANIX video 4" }
+      ],
+      "files": []
+    },
     "links": []
   },
   {
@@ -247,7 +316,7 @@
         "content": "Designed and developed a pharmaceutical ecosystem connecting medicine suppliers and warehouses with retail pharmacies to streamline drug distribution and order management. Implemented dynamic batch tracking, medicine search and filtering, automated stock calculations, real-time order processing, and role-specific authorization for warehouse managers and pharmacists."
       }
     ],
-    "media": { "images": [], "videos": [], "files": [] },
+    "media": { "images": [], "videos": [{ "url": "/Attachments/projects/Medixify/1.mp4", "caption": "Medixify demonstration" }], "files": [] },
     "links": []
   }
 ]

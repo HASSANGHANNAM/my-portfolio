@@ -45,6 +45,7 @@ export interface SkillCategory {
 
 export interface Certificate {
   id: string;
+  category: 'Academic' | 'Programming Advices' | 'Achievements';
   title: string;
   issuer: string;
   issueDate: string;
@@ -53,6 +54,7 @@ export interface Certificate {
     url: string;
     caption: string;
   }[];
+  documentUrl?: string;
   skillsCovered: string[];
 }
 
