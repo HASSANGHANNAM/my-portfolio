@@ -25,64 +25,45 @@ const formatDate = (date: string) =>
                     aria-labelledby={`${category.toLowerCase().replaceAll(" ", "-")}-heading`}
                 >
                     <div class="mb-7">
-                        <>
-                            <p class="font-mono text-sm text-emerald-600 dark:text-emerald-400">
-                                0{categoryIndex + 1} / Credentials
-                            </p>
-                            <h2
-                                id={`${category.toLowerCase().replaceAll(" ", "-")}-heading`}
-                                class="mt-2 text-2xl font-semibold text-slate-950 dark:text-white"
-                            >
-                                {category}
-                            </h2>
-                        </>
+                        <p class="font-mono text-sm text-emerald-600 dark:text-emerald-400">
+                            0{categoryIndex + 1} / Credentials
+                        </p>
+                        <h2
+                            id={`${category.toLowerCase().replaceAll(" ", "-")}-heading`}
+                            class="mt-2 text-2xl font-semibold text-slate-950 dark:text-white"
+                        >
+                            {category}
+                        </h2>
                     </div>
                     <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                         {categoryCertificates.map((certificate) => {
-                            const lightboxId = `cert-${certificate.title.toLowerCase().replaceAll(/[^a-z0-9]/g, "-")}`;
+                            const imagesJson = JSON.stringify(
+                                certificate.images,
+                            );
+                            const firstImage =
+                                certificate.images[0]?.url ||
+                                "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg";
+
                             return (
                                 <article class="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-[0_14px_40px_rgba(16,185,129,0.1)] dark:border-slate-800 dark:bg-slate-900/60">
-                                    {/* سلايدر عرض الصور داخل البطاقة */}
-                                    <div class="certificate-slider relative aspect-[16/9] overflow-hidden border-b border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-950">
+                                    {/* سلايدر عرض الصور الديناميكي */}
+                                    <div
+                                        class="certificate-slider relative aspect-[16/9] overflow-hidden border-b border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-950"
+                                        data-images={imagesJson}
+                                    >
                                         <div class="relative h-full w-full">
-                                            {certificate.images.map(
-                                                (img, imgIndex) => (
-                                                    <div
-                                                        class:list={[
-                                                            "certificate-slide absolute inset-0 h-full w-full items-center justify-center",
-                                                            imgIndex === 0
-                                                                ? "flex"
-                                                                : "hidden",
-                                                        ]}
-                                                        data-slide-index={
-                                                            imgIndex
-                                                        }
-                                                    >
-                                                        <img
-                                                            src={img.url}
-                                                            alt={`${certificate.title} certificate`}
-                                                            loading={
-                                                                imgIndex === 0
-                                                                    ? "eager"
-                                                                    : "lazy"
-                                                            }
-                                                            data-media-open
-                                                            data-media-target={
-                                                                lightboxId
-                                                            }
-                                                            data-media-kind="image"
-                                                            data-media-src={
-                                                                img.url
-                                                            }
-                                                            data-media-gallery={JSON.stringify(
-                                                                certificate.images,
-                                                            )}
-                                                            onerror="this.onerror=null; this.src='/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg';"
-                                                            class="h-full w-full cursor-zoom-in object-cover"
-                                                        />
-                                                    </div>
-                                                ),
-                                            )}
+                                            <img
+                                                src={firstImage}
+                                                alt={`${certificate.title} certificate`}
+                                                loading="lazy"
+                                                data-media-open
+                                                data-media-target="global-certificate-lightbox"
+                                                data-media-kind="image"
+                                                data-media-src={firstImage}
+                                                data-media-gallery={imagesJson}
+                                                onerror="this.onerror=null; this.src='/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg';"
+                                                class="certificate-active-img h-full w-full cursor-zoom-in object-cover transition-opacity duration-200"
+                                            />
                                         </div>
 
                                         {/* أزرار ونقاط التقليب تظهر فقط إذا كان هناك أكثر من صورة */}
@@ -165,100 +146,96 @@ const formatDate = (date: string) =>
     }
 </div>
 
-{/* نافذة الـ Lightbox المكبرة */}
-{
-    categories.map((category) => {
-        const categoryCertificates = certificateMedia.filter(
-            (certificate) => certificate.category === category,
-        );
-        return categoryCertificates.map((certificate) => {
-            const lightboxId = `cert-${certificate.title.toLowerCase().replaceAll(/[^a-z0-9]/g, "-")}`;
-            return (
-                <div
-                    class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/90 p-4 backdrop-blur-md sm:p-8"
-                    data-media-lightbox={lightboxId}
-                    aria-hidden="true"
-                >
-                    <div class="relative flex max-h-full w-full max-w-6xl items-center justify-center">
-                        <button
-                            type="button"
-                            data-media-close
-                            class="absolute right-0 top-0 z-10 flex h-10 w-10 items-center justify-center rounded-lg border border-slate-600 bg-slate-950/80 text-2xl text-slate-300 hover:border-emerald-400 hover:text-emerald-400"
-                            aria-label="Close viewer"
-                        >
-                            ×
-                        </button>
-                        <button
-                            type="button"
-                            data-gallery-prev
-                            class="absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-emerald-400/70 bg-slate-950/80 text-xl text-emerald-400 transition hover:bg-emerald-400 hover:text-slate-950"
-                            aria-label="Previous image"
-                        >
-                            &lt;
-                        </button>
-                        <img
-                            data-media-lightbox-image
-                            alt=""
-                            class="max-h-[90vh] max-w-full object-contain"
-                        />
-                        <button
-                            type="button"
-                            data-gallery-next
-                            class="absolute right-0 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-emerald-400/70 bg-slate-950/80 text-xl text-emerald-400 transition hover:bg-emerald-400 hover:text-slate-950"
-                            aria-label="Next image"
-                        >
-                            &gt;
-                        </button>
-                    </div>
-                </div>
-            );
-        });
-    })
-}
+{/* نافذة الـ Lightbox الموحدة والمكبرة (واحدة فقط لكل الصفحات) */}
+<div
+    class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/90 p-4 backdrop-blur-md sm:p-8"
+    data-media-lightbox="global-certificate-lightbox"
+    aria-hidden="true"
+>
+    <div
+        class="relative flex max-h-full w-full max-w-6xl items-center justify-center"
+    >
+        <button
+            type="button"
+            data-media-close
+            class="absolute right-0 top-0 z-10 flex h-10 w-10 items-center justify-center rounded-lg border border-slate-600 bg-slate-950/80 text-2xl text-slate-300 hover:border-emerald-400 hover:text-emerald-400"
+            aria-label="Close viewer"
+        >
+            ×
+        </button>
+        <button
+            type="button"
+            data-gallery-prev
+            class="absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-emerald-400/70 bg-slate-950/80 text-xl text-emerald-400 transition hover:bg-emerald-400 hover:text-slate-950"
+            aria-label="Previous image"
+        >
+            &lt;
+        </button>
+        <img
+            data-media-lightbox-image
+            alt=""
+            class="max-h-[90vh] max-w-full object-contain"
+        />
+        <button
+            type="button"
+            data-gallery-next
+            class="absolute right-0 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-emerald-400/70 bg-slate-950/80 text-xl text-emerald-400 transition hover:bg-emerald-400 hover:text-slate-950"
+            aria-label="Next image"
+        >
+            &gt;
+        </button>
+    </div>
+</div>
 
-{/* سكربت إدارة السلايدر المصغر */}
+{/* السكربت الديناميكي الخفيف لتغيير الصور */}
 <script>
-    document.querySelectorAll(".certificate-slider").forEach((slider) => {
-        const slides =
-            slider.querySelectorAll<HTMLElement>(".certificate-slide");
-        const dots = slider.querySelectorAll<HTMLElement>(
-            "[data-carousel-dot]",
-        );
-        const prevBtn = slider.querySelector("[data-carousel-prev]");
-        const nextBtn = slider.querySelector("[data-carousel-next]");
-        let currentIndex = 0;
+    document
+        .querySelectorAll<HTMLElement>(".certificate-slider")
+        .forEach((slider) => {
+            const imgElement = slider.querySelector<HTMLImageElement>(
+                ".certificate-active-img",
+            );
+            const dots = slider.querySelectorAll<HTMLElement>(
+                "[data-carousel-dot]",
+            );
+            const prevBtn = slider.querySelector("[data-carousel-prev]");
+            const nextBtn = slider.querySelector("[data-carousel-next]");
 
-        function updateSlide(index: number) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle("flex", i === index);
-                slide.classList.toggle("hidden", i !== index);
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle("bg-emerald-400", i === index);
-                dot.classList.toggle("bg-slate-600", i !== index);
-            });
-            currentIndex = index;
-        }
+            const imagesData = JSON.parse(slider.dataset.images || "[]");
+            let currentIndex = 0;
 
-        prevBtn?.addEventListener("click", (e) => {
-            e.stopPropagation();
-            const newIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateSlide(newIndex);
-        });
+            function updateSlide(index: number) {
+                if (!imgElement || imagesData.length === 0) return;
 
-        nextBtn?.addEventListener("click", (e) => {
-            e.stopPropagation();
-            const newIndex = (currentIndex + 1) % slides.length;
-            updateSlide(newIndex);
-        });
+                currentIndex = (index + imagesData.length) % imagesData.length;
+                const newImgUrl = imagesData[currentIndex].url;
 
-        dots.forEach((dot, index) => {
-            dot.addEventListener("click", (e) => {
+                imgElement.src = newImgUrl;
+                imgElement.dataset.mediaSrc = newImgUrl;
+
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("bg-emerald-400", i === currentIndex);
+                    dot.classList.toggle("bg-slate-600", i !== currentIndex);
+                });
+            }
+
+            prevBtn?.addEventListener("click", (e) => {
                 e.stopPropagation();
-                updateSlide(index);
+                updateSlide(currentIndex - 1);
+            });
+
+            nextBtn?.addEventListener("click", (e) => {
+                e.stopPropagation();
+                updateSlide(currentIndex + 1);
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    updateSlide(index);
+                });
             });
         });
-    });
 </script>
 
 <script src="../scripts/media-lightbox.ts"></script>
