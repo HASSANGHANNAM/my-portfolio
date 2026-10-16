@@ -5,8 +5,18 @@
     "title": "Bachelor's Degree in Information Technology Engineering",
     "issuer": "Damascus University",
     "issueDate": "Sep 2026",
-    "imageUrl": "/Attachments/certificates/Academic/damascus-university-degree.svg",
-    "skillsCovered": ["Software Engineering", "Information Systems", "Distributed Systems", "Database Design", "Algorithms"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Academic/damascus-university-degree.svg"
+      }
+    ],
+    "skillsCovered": [
+      "Software Engineering",
+      "Information Systems",
+      "Distributed Systems",
+      "Database Design",
+      "Algorithms"
+    ]
   },
   {
     "id": "programming-advices-01",
@@ -14,9 +24,15 @@
     "title": "Programming Foundations - Level 1",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/01-programming-foundations-level-1.pdf",
-    "skillsCovered": ["Programming Foundations", "Problem Solving"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/01-programming-foundations-level-1.png"
+      }
+    ],
+    "skillsCovered": [
+      "Programming Foundations",
+      "Problem Solving"
+    ]
   },
   {
     "id": "programming-advices-02",
@@ -24,9 +40,15 @@
     "title": "Algorithms & Problem Solving - Level 1",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/02-algorithms-problem-solving-level-1.pdf",
-    "skillsCovered": ["Algorithms", "Problem Solving"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/02-algorithms-problem-solving-level-1.png"
+      }
+    ],
+    "skillsCovered": [
+      "Algorithms",
+      "Problem Solving"
+    ]
   },
   {
     "id": "programming-advices-03",
@@ -34,9 +56,15 @@
     "title": "Introduction to Programming Using C - Level 1",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/03-introduction-to-programming-using-c-level-1.pdf",
-    "skillsCovered": ["C++", "Programming Fundamentals"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/03-introduction-to-programming-using-c-level-1.png"
+      }
+    ],
+    "skillsCovered": [
+      "C++",
+      "Programming Fundamentals"
+    ]
   },
   {
     "id": "programming-advices-04",
@@ -44,9 +72,15 @@
     "title": "Algorithms & Problem Solving - Level 1 Solutions",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/04-algorithms-problem-solving-level-1-solutions.pdf",
-    "skillsCovered": ["Algorithms", "Solutions Design"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/04-algorithms-problem-solving-level-1-solutions.png"
+      }
+    ],
+    "skillsCovered": [
+      "Algorithms",
+      "Solutions Design"
+    ]
   },
   {
     "id": "programming-advices-05",
@@ -54,9 +88,15 @@
     "title": "Algorithms & Problem Solving - Level 2",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/05-algorithms-problem-solving-level-2.pdf",
-    "skillsCovered": ["Algorithms", "Advanced Problem Solving"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/05-algorithms-problem-solving-level-2.png"
+      }
+    ],
+    "skillsCovered": [
+      "Algorithms",
+      "Advanced Problem Solving"
+    ]
   },
   {
     "id": "programming-advices-06",
@@ -64,9 +104,15 @@
     "title": "Introduction to Programming Using C - Level 2",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/06-for-introduction-to-programming-using-c-level-2.pdf",
-    "skillsCovered": ["C++", "Advanced Programming"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/06-introduction-to-programming-using-c-level-2.png"
+      }
+    ],
+    "skillsCovered": [
+      "C++",
+      "Advanced Programming"
+    ]
   },
   {
     "id": "programming-advices-07",
@@ -74,9 +120,15 @@
     "title": "Algorithms & Problem Solving - Level 3",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/07-algorithms-problem-solving-level-3.pdf",
-    "skillsCovered": ["Algorithms", "Advanced Problem Solving"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/07-algorithms-problem-solving-level-3.png"
+      }
+    ],
+    "skillsCovered": [
+      "Algorithms",
+      "Advanced Problem Solving"
+    ]
   },
   {
     "id": "programming-advices-08",
@@ -84,9 +136,15 @@
     "title": "Algorithms & Problem Solving - Level 4",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/08-algorithms-problem-solving-level-4.pdf",
-    "skillsCovered": ["Algorithms", "Advanced Problem Solving"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/08-algorithms-problem-solving-level-4.png"
+      }
+    ],
+    "skillsCovered": [
+      "Algorithms",
+      "Advanced Problem Solving"
+    ]
   },
   {
     "id": "programming-advices-09",
@@ -94,9 +152,15 @@
     "title": "Programming Foundations - Level 2",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/09-foundations-level-2.pdf",
-    "skillsCovered": ["Programming Foundations", "Problem Solving"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/09-foundations-level-2.png"
+      }
+    ],
+    "skillsCovered": [
+      "Programming Foundations",
+      "Problem Solving"
+    ]
   },
   {
     "id": "programming-advices-10",
@@ -104,9 +168,15 @@
     "title": "OOP As It Should Be - Concepts",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/10-oop-as-it-should-be-concepts.pdf",
-    "skillsCovered": ["Object-Oriented Programming", "Software Design"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/10-oop-as-it-should-be-concepts.png"
+      }
+    ],
+    "skillsCovered": [
+      "Object-Oriented Programming",
+      "Software Design"
+    ]
   },
   {
     "id": "programming-advices-11",
@@ -114,9 +184,15 @@
     "title": "OOP As It Should Be - Applications",
     "issuer": "Programming Advices",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/avatar%20and%20another%20photo/certificate-placeholder.svg",
-    "documentUrl": "/Attachments/certificates/Programming%20Advices/11-oop-as-it-should-be-applications.pdf",
-    "skillsCovered": ["Object-Oriented Programming", "Application Design"]
+    "images": [
+      {
+        "url": "/Attachments/certificates/Programming Advices/11-oop-as-it-should-be-applications.png"
+      }
+    ],
+    "skillsCovered": [
+      "Object-Oriented Programming",
+      "Application Design"
+    ]
   },
   {
     "id": "codeforces-pupil",
@@ -124,13 +200,25 @@
     "title": "Codeforces Pupil Rank & DCPC Participant",
     "issuer": "Codeforces & Competitive Programming Community",
     "issueDate": "2025",
-    "imageUrl": "/Attachments/certificates/Achievements/Codeforces/1.jpg",
     "images": [
-      { "url": "/Attachments/certificates/Achievements/Codeforces/1.jpg", "caption": "Codeforces achievement 1" },
-      { "url": "/Attachments/certificates/Achievements/Codeforces/2.jpg", "caption": "Codeforces achievement 2" },
-      { "url": "/Attachments/certificates/Achievements/Codeforces/3.jpg", "caption": "Codeforces achievement 3" },
-      { "url": "/Attachments/certificates/Achievements/Codeforces/4.jpg", "caption": "Codeforces achievement 4" }
+      {
+        "url": "/Attachments/certificates/Achievements/Codeforces/1.jpg"
+      },
+      {
+        "url": "/Attachments/certificates/Achievements/Codeforces/2.jpg"
+      },
+      {
+        "url": "/Attachments/certificates/Achievements/Codeforces/3.jpg"
+      },
+      {
+        "url": "/Attachments/certificates/Achievements/Codeforces/4.jpg"
+      }
     ],
-    "skillsCovered": ["Data Structures", "Advanced Algorithms", "Problem Solving", "Graph Theory"]
+    "skillsCovered": [
+      "Data Structures",
+      "Advanced Algorithms",
+      "Problem Solving",
+      "Graph Theory"
+    ]
   }
 ]

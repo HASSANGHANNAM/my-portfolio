@@ -5,9 +5,6 @@ function setModalState(modal: HTMLElement, isOpen: boolean) {
 	modal.classList.toggle('hidden', !isOpen);
 	modal.setAttribute('aria-hidden', String(!isOpen));
 	document.body.classList.toggle('overflow-hidden', isOpen);
-	modal.querySelectorAll<HTMLVideoElement>('video').forEach((video) => {
-		if (!isOpen) video.pause();
-	});
 }
 
 function showSlide(modal: HTMLElement, nextIndex: number) {
@@ -18,8 +15,6 @@ function showSlide(modal: HTMLElement, nextIndex: number) {
 	slides.forEach((slide, index) => {
 		slide.classList.toggle('hidden', index !== activeIndex);
 		slide.classList.toggle('flex', index === activeIndex);
-		const video = slide.querySelector('video');
-		if (video && index !== activeIndex) video.pause();
 	});
 
 	modal.querySelectorAll<HTMLElement>('[data-carousel-dot]').forEach((dot, index) => {

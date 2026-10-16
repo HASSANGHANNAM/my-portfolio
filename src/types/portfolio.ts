@@ -16,24 +16,18 @@ export interface Project {
     heading: string;
     content: string;
   }[];
+  // التعديل هنا: اقتصر الـ media على الصور فقط
   media: {
     images: {
       url: string;
       caption: string;
     }[];
-    videos: {
-      url: string;
-      caption: string;
-      embed?: boolean;
-    }[];
-    files: {
-      name: string;
-      url: string;
-    }[];
   };
+  // التعديل هنا: الـ links أصبحت تستوعب الروابط، الفيديوهات، والملفات بشكل موحد
   links: {
     label: string;
     url: string;
+    type?: string;
   }[];
 }
 
@@ -49,7 +43,7 @@ export interface Certificate {
   title: string;
   issuer: string;
   issueDate: string;
-  imageUrl: string;
+  imageUrl?: string; // أصبحت اختيارية بعد اعتماد الـ images بالكامل
   images?: {
     url: string;
     caption: string;

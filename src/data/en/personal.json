@@ -1,7 +1,7 @@
 {
-  "fullName": "Hassan Ghannam",
+  "fullName": "Hassan Ghanam",
   "title": "Software Engineer | Backend Developer",
-  "bio": "Fresh Graduate Software & Information Systems Engineer from Damascus University with expertise in backend engineering, clean architecture, and distributed systems. Proficient in building scalable RESTful APIs using PHP/Laravel with SOLID design principles, payment gateway integration (Stripe), and Firebase. Experienced in Search & Information Retrieval Systems, Vector Databases (FAISS), Advanced Algorithms (Minimax, BFS, DFS, A*.....), Compiler Design, Asynchronous Queues, and Redis Caching. Proven track record in competitive programming (Codeforces Pupil, DCBC participant) with solid algorithmic problem-solving skills.",
+  "bio": "Software Engineer from Damascus University, specializing in robust backend architecture and the engineering foundations of data systems. Focused on the core challenges of backend engineering—structuring clean domain layers, designing scalable RESTful APIs, and building high-performance data flows using PHP/Laravel and SOLID principles. Practical experience in Redis caching, asynchronous event processing, and custom Compiler Design architectures. Strong technical foundation in database administration, data engineering, and Information Retrieval / Vector Search Systems, backed by an advanced algorithmic and competitive programming background (Codeforces Pupil).",
   "education": "Bachelor's Degree in Information Technology Engineering (Specialization in Software Engineering & Information Systems) - Damascus University (Sep 2021 - Sep 2026)",
   "socialLinks": {
     "email": "hassanmohammadghannam@gmail.com",
