@@ -4,7 +4,7 @@
     "category": "Academic",
     "title": "Bachelor's Degree in Information Technology Engineering",
     "issuer": "Damascus University",
-    "issueDate": "Sep 2026",
+    "issueDate": "2026-09-15",
     "images": [
       {
         "url": "/Attachments/certificates/Academic/damascus-university-degree.svg"
@@ -23,15 +23,19 @@
     "category": "Programming Advices",
     "title": "Programming Foundations - Level 1",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2024-09-18",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/01-programming-foundations-level-1.png"
       }
     ],
     "skillsCovered": [
-      "Programming Foundations",
-      "Problem Solving"
+      "Computer Science Fundamentals",
+      "Data & Memory Representation",
+      "Number Systems (Binary, Hex, Octal)",
+      "Compilers & Translation Process",
+      "Program Execution & Architecture",
+      "Problem Solving Foundations"
     ]
   },
   {
@@ -39,15 +43,18 @@
     "category": "Programming Advices",
     "title": "Algorithms & Problem Solving - Level 1",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2024-09-18",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/02-algorithms-problem-solving-level-1.png"
       }
     ],
     "skillsCovered": [
-      "Algorithms",
-      "Problem Solving"
+      "Algorithmic Thinking",
+      "Problem Solving & Analysis",
+      "Logic Building & Flowcharts",
+      "Step-by-Step Problem Breakdown",
+      "Decision Logic & Control Flow"
     ]
   },
   {
@@ -55,15 +62,19 @@
     "category": "Programming Advices",
     "title": "Introduction to Programming Using C - Level 1",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2024-09-18",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/03-introduction-to-programming-using-c-level-1.png"
       }
     ],
     "skillsCovered": [
-      "C++",
-      "Programming Fundamentals"
+      "C++ Programming",
+      "Procedural Programming",
+      "Data Types & Variable Scope",
+      "Functions & Logic Reusability",
+      "Control Structures & Loops",
+      "Arrays & Structs"
     ]
   },
   {
@@ -71,15 +82,19 @@
     "category": "Programming Advices",
     "title": "Algorithms & Problem Solving - Level 1 Solutions",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2024-09-18",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/04-algorithms-problem-solving-level-1-solutions.png"
       }
     ],
     "skillsCovered": [
-      "Algorithms",
-      "Solutions Design"
+      "Clean Code Principles",
+      "Divide and Conquer Strategy",
+      "Code Modularization & Functions",
+      "DRY Principle (Don't Repeat Yourself)",
+      "Maintainability & Refactoring",
+      "Problem Solving (Advanced)"
     ]
   },
   {
@@ -87,15 +102,19 @@
     "category": "Programming Advices",
     "title": "Algorithms & Problem Solving - Level 2",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2024-10-07",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/05-algorithms-problem-solving-level-2.png"
       }
     ],
     "skillsCovered": [
-      "Algorithms",
-      "Advanced Problem Solving"
+      "Intermediate Algorithms & Logic",
+      "Pattern Recognition",
+      "Project-Based Development",
+      "Code Refactoring & Optimization",
+      "Clean Code Application",
+      "Practical Problem Solving"
     ]
   },
   {
@@ -103,15 +122,19 @@
     "category": "Programming Advices",
     "title": "Introduction to Programming Using C - Level 2",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2024-10-11",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/06-introduction-to-programming-using-c-level-2.png"
       }
     ],
     "skillsCovered": [
-      "C++",
-      "Advanced Programming"
+      "Advanced C++ Programming",
+      "Memory Management (Stack & Heap)",
+      "Pointers & References",
+      "Professional Debugging",
+      "File I/O Operations",
+      "Vectors & Data Structures"
     ]
   },
   {
@@ -119,15 +142,19 @@
     "category": "Programming Advices",
     "title": "Algorithms & Problem Solving - Level 3",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2024-10-17",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/07-algorithms-problem-solving-level-3.png"
       }
     ],
     "skillsCovered": [
-      "Algorithms",
-      "Advanced Problem Solving"
+      "Advanced Algorithmic Thinking",
+      "Complex Problem Decomposition",
+      "Project-Based System Building",
+      "Advanced Pattern Recognition",
+      "Real-World Logic Simulation",
+      "C++ Applied Mastery"
     ]
   },
   {
@@ -135,15 +162,19 @@
     "category": "Programming Advices",
     "title": "Algorithms & Problem Solving - Level 4",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2024-11-01",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/08-algorithms-problem-solving-level-4.png"
       }
     ],
     "skillsCovered": [
-      "Algorithms",
-      "Advanced Problem Solving"
+      "Large-Scale Problem Solving",
+      "System-Level Thinking",
+      "Advanced Divide & Conquer",
+      "Code Complexity Control",
+      "Scalable Software Architecture",
+      "High-Endurance Engineering"
     ]
   },
   {
@@ -151,15 +182,19 @@
     "category": "Programming Advices",
     "title": "Programming Foundations - Level 2",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2025-11-09",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/09-foundations-level-2.png"
       }
     ],
     "skillsCovered": [
-      "Programming Foundations",
-      "Problem Solving"
+      "Computer Networks & TCP/IP",
+      "Web Architecture & HTTP/HTTPS",
+      "DNS & IP Routing (IPv4/IPv6)",
+      "API Architecture & Web Services",
+      "3-Tier System Architecture",
+      "Network Security Fundamentals"
     ]
   },
   {
@@ -167,15 +202,19 @@
     "category": "Programming Advices",
     "title": "OOP As It Should Be - Concepts",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2026-01-09",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/10-oop-as-it-should-be-concepts.png"
       }
     ],
     "skillsCovered": [
-      "Object-Oriented Programming",
-      "Software Design"
+      "Object-Oriented Programming (OOP)",
+      "Classes & Objects Design",
+      "Encapsulation & Abstraction",
+      "Inheritance & Polymorphism",
+      "Virtual Functions & Dynamic Binding",
+      "Object Lifecycle (Constructors & Destructors)"
     ]
   },
   {
@@ -183,15 +222,19 @@
     "category": "Programming Advices",
     "title": "OOP As It Should Be - Applications",
     "issuer": "Programming Advices",
-    "issueDate": "2025",
+    "issueDate": "2026-05-11",
     "images": [
       {
         "url": "/Attachments/certificates/Programming Advices/11-oop-as-it-should-be-applications.png"
       }
     ],
     "skillsCovered": [
-      "Object-Oriented Programming",
-      "Application Design"
+      "Object-Oriented Design (OOD)",
+      "System Architecture & Implementation",
+      "Security, Permissions & Auditing",
+      "Custom Libraries Development",
+      "Modular Application Design",
+      "Advanced Validation & Utilities"
     ]
   },
   {
@@ -199,7 +242,7 @@
     "category": "Achievements",
     "title": "Codeforces Pupil Rank & DCPC Participant",
     "issuer": "Codeforces & Competitive Programming Community",
-    "issueDate": "2025",
+    "issueDate": "2023-03-18",
     "images": [
       {
         "url": "/Attachments/certificates/Achievements/Codeforces/1.jpg"
@@ -215,10 +258,15 @@
       }
     ],
     "skillsCovered": [
+      "Competitive Programming",
       "Data Structures",
       "Advanced Algorithms",
-      "Problem Solving",
-      "Graph Theory"
+      "Graph Theory & Trees",
+      "Dynamic Programming",
+      "Greedy Algorithms",
+      "Sorting & Searching",
+      "Number Theory & Combinatorics",
+      "Two Pointers & Sliding Window"
     ]
   }
 ]
